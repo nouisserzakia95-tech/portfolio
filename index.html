@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mon portfolio"/>
+    <meta name="robots" content="index follow"/>
+    <meta name="author" content="zakia nouisser"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Mon portfolio</title>
+</head>
+<body>
+    <header>
+        <img src="images/my-logo.png" alt="hello" title="The logo"/>
+        <nav>
+            <ul>
+            <li><a href="index.html">Home</a><br/></li>
+            <li><a href="about.html">About Us</a><br/></li>
+            <li><a href="portfolio.html">Portfolio</a><br/></li>
+            </ul>
+            
+        </nav>
+
+    </header>
+
+    <section id="about">
+        <div>
+            <h1>Zakia Nouisser  <br/>
+            IHEC C <br />
+            BI Student <br/></h1>
+            <p>Développeur Web motivée et passionnée,  <br>
+           je conçois et réalise des sites modernes responsives et orientés expérience utilisateur.
+           Curieuse et polyvalente, je maîtrise les bases du front-end (HTML, CSS, JavaScript).<
+           J’aime apprendre continuellement de nouvelles technologies,résoudre des problèmes techniques <br>
+           et transformer des idées en solutions web fonctionnelles et professionnelles.. </p>
+        <a href="#contact">Any question? Contact us!</a><br>
+        </div>
+        
+        <img src="images/5d40033c-6e8b-4130-a025-9877a74f35b2.jpg" alt="hi it's me" title="this is my logo" height="200px" /><br>
+        
+    </section>
+
+    <h2>See my latest projects</h2>
+    <section id="projects">
+        <article>
+            <img src="images/mywater.png" alt="project 1"><br>
+             <h3>Project 1</h3>
+             <p>MaYna+, un système intelligent qui aide chaque foyer à économiser <br>
+                l’eau , à anticiper les coupures ,gérer l’eau intelligemment <br>
+                et à réduire le gaspillage, tout en répondant à un besoin réel en Tunisie.<a href="https://github.com/nouisserzakia95-tech/Mywater-.git">see more....</a> 
+            </p>
+        </article>
+        <article>
+            <img src="images/map.png" alt="project 2"><br>
+             <h3>Project 2</h3>
+             <p>Site web interactif présentant la richesse touristique et culturelle de la Tunisie. Le projet inclut une carte interactive des gouvernorats, des pages détaillées pour chaque région (comme Kairouan), et une expérience utilisateur moderne avec design responsive. <br> 
+            <a href="https://github.com/nouisserzakia95-tech/Tunisia-Map.git">see more....</a> 
+            </p>
+        </article>
+        <article>
+            <img src="images/diagnostic.png" alt="project 3"><br>
+             <h3>Project 3</h3>
+             <p>Application de diagnostic médical simplifié qui analyse les symptômes du patient et génère automatiquement une maladie probable, un score détaillé et des recommandations. Le système offre une interface claire, un rapport complet et un pop-up de confirmation du diagnostic.
+                <a href="https://github.com/nouisserzakia95-tech/Diagnostic-.git">see more....</a> 
+            </p>
+        </article>
+    </section>
+    <a href="portfolio.html" class="btn-voir-plus">Voir tous mes projets →</a>
+    <section id="contact">
+        <h2>let's talk about your project</h2>
+        <form>
+            <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" size="50" maxlength="30" id="name" placeholder="Your name here..." required>
+            </div>
+            <div class="form-field">
+                <label for="mail">Email</label>
+                <input type="email" size="50" maxlength="30" id="mail" placeholder="you email..." required pattern=".{1hec.ucar.tn}">
+            </div>
+            <div class="form-field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="5" cols="48" placeholder="let a message about your project"></textarea>
+            </div>
+            <div class="button-group">
+                <input type="submit" value="send!">
+                <input type="reset" value="supprimer!">
+            </div>
+        </form>
+    </section>
+    <footer>
+        <div class="footer-social">
+                <h3>Suivez-nous</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/"><img src="images/instagram.png" height="50px"></a>
+                    <a href="https://www.facebook.com/"><img src="images/facebook.jpg" height="50px"></a>
+                    <a href="https://www.linkedin.com"> <img src="images/linkedin.webp" height="50px"></a>
+                    <a href="https://x.com/"> <img src="images/twitter.webp" height="50px"></a>
+                    <a href="https://github.com/nouisserzakia95-tech"> <img src="images/git.png" height="50px"></a>
+                </div>
+        </div>
+        <div classe="footer-content">
+            <div class="footer-contact">
+                <p><i class="fas fa-map-marker-alt"></i> 123 MAPLE STREET SPRINGFILED,IL 62704 ,USA</p>
+                <p><i class="fas fa-envelope"></i> nouisserzakia95@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +216 54 827 981</p>
+                <p>&#169copy;zakia-nouisser - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
